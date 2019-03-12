@@ -61,6 +61,19 @@ public class List_inArraySlots {
         return s+= "]";
       }
 
+      /*
+      public Object get(int index) {
+
+          if(type[index] == 0)
+          return intElements[index];
+
+          else if(type[index] == 1)
+          return doubleElements[index];
+
+          else
+          return stringElements[index];
+      }
+      */
 
     /**
       Appends @value to the end of this list.
@@ -121,7 +134,12 @@ public class List_inArraySlots {
               // this method is called when that is appropriate.
               // So test using the println(), then comment it out.
               // */
+<<<<<<< HEAD
+
+     // }
+=======
      }
+>>>>>>> 50984b85c7cdab707aa741a2eb5c273c23f8916d
 
      public void add( int index, int type   // same meaning as in typeOfElements
                               , int intValue
@@ -153,5 +171,9 @@ public class List_inArraySlots {
           filledElements++;
         }
       }
+<<<<<<< HEAD
+     }
+=======
 
+>>>>>>> 50984b85c7cdab707aa741a2eb5c273c23f8916d
 }
