@@ -98,8 +98,8 @@ public class List_inArraySlots {
 
 	int[] expandedTypeList = new int [typeOfElements.length * 2];
 	int[] expandedIntList = new int [intElements.length * 2];
-	int[] expandedDoubleList = new int [doubleElements.length * 2];
-	int[] expandedStringList = new int [stringElements.length * 2];
+	double[] expandedDoubleList = new double [doubleElements.length * 2];
+	String[] expandedStringList = new String [stringElements.length * 2];
 
     	for (int i = 0; i < typeOfElements.length; i++) {
       	   expandedTypeList[i] = typeOfElements[i];
