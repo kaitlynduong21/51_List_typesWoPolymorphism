@@ -71,6 +71,10 @@ public class List_inArraySlots {
                               , double doubleValue
                               , String stringValue
                               ) {
+	if(typeOfElements.length == filledElements)
+	expand();
+	
+
        if (type == 0) {
          intElements[filledElements] = intValue;
        } else {
@@ -90,13 +94,32 @@ public class List_inArraySlots {
       Double the capacity of the List_inArraySlots,
       preserving existing data.
      */
-     // private void expand() {
-        // System.out.println( "expand... (for debugging)");
+     private void expand() {
+
+	int[] expandedTypeList = new int [typeOfElements.length * 2];
+	int[] expandedIntList = new int [intElements.length * 2];
+	int[] expandedDoubleList = new int [doubleElements.length * 2];
+	int[] expandedStringList = new int [stringElements.length * 2];
+
+    	for (int i = 0; i < typeOfElements.length; i++) {
+      	   expandedTypeList[i] = typeOfElements[i];
+	   expandedIntList[i] = intElements[i];
+	   expandedDoubleList[i] = doubleElements[i];
+	   expandedStringList[i] = stringElements[i];
+    	}
+    	
+	typeOfElements = expandedTypeList;
+    	intElements = expandedIntList;
+    	doubleElements = expandedDoubleList;
+    	stringElements = expandedStringList;
+
+
+        //System.out.println( "expand... (for debugging)");
            // /* S.O.P. rules for debugging:
               // Working methods should be silent. But during
               // development, the programmer must verify that
               // this method is called when that is appropriate.
               // So test using the println(), then comment it out.
               // */
-     // }
+     }
 }
