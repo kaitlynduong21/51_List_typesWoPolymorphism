@@ -135,10 +135,10 @@ public class List_inArraySlots {
           add(type, intValue, doubleValue, stringValue);
         } else {
           for (int i = index; i < filledElements - 1; i++) {
-            intElements[i] = intElements[i + 1];
-            doubleElements[i] = doubleElements[i + 1];
-            stringElements[i] = stringElements[i + 1];
-            typeOfElements[i] = typeOfElements[i + 1];
+            intElements[i + 1] = intElements[i];
+            doubleElements[i + 1] = doubleElements[i];
+            stringElements[i + 1] = stringElements[i];
+            typeOfElements[i + 1] = typeOfElements[i];
           }
           if (type == 0) {
             intElements[index] = intValue;

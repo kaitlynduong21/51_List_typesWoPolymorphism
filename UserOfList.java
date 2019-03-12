@@ -35,6 +35,50 @@ public class UserOfList {
               + list.size() + " elements:");
          System.out.println( list + System.lineSeparator());
 
-         //list.add( 1, -1, 1.618, "junk");
+         addAtTest( 1, 1, -1, 1.618, "junk");
+
+         addAtTest( 10, 2, -1, -2.0,  "important");
     }
+
+
+    private static void addAtTest( int addAt, int type   // same meaning as in typeOfElements
+                                 , int intValue
+                                 , double doubleValue
+                                 , String stringValue
+                                 ) {
+       list.add( addAt, type, intValue, doubleValue, stringValue);
+
+       if (type == 0) {
+         System.out.println(
+             "insert " + intValue
+           + " at position " + addAt
+           + ", resulting in "  + list.size() + " elements:"
+           + System.lineSeparator()
+           + list
+           + System.lineSeparator()
+         );
+       } else {
+         if (type == 1) {
+           System.out.println(
+               "insert " + doubleValue
+             + " at position " + addAt
+             + ", resulting in "  + list.size() + " elements:"
+             + System.lineSeparator()
+             + list
+             + System.lineSeparator()
+           );
+         } else {
+           System.out.println(
+               "insert " + stringValue
+             + " at position " + addAt
+             + ", resulting in "  + list.size() + " elements:"
+             + System.lineSeparator()
+             + list
+             + System.lineSeparator()
+           );
+         }
+       }
+
+   }
+
 }
