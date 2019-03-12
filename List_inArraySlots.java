@@ -134,12 +134,9 @@ public class List_inArraySlots {
               // this method is called when that is appropriate.
               // So test using the println(), then comment it out.
               // */
-<<<<<<< HEAD
 
      // }
-=======
      }
->>>>>>> 50984b85c7cdab707aa741a2eb5c273c23f8916d
 
      public void add( int index, int type   // same meaning as in typeOfElements
                               , int intValue
@@ -152,11 +149,11 @@ public class List_inArraySlots {
         if (index == filledElements) {
           add(type, intValue, doubleValue, stringValue);
         } else {
-          for (int i = index; i < filledElements - 1; i++) {
-            intElements[i + 1] = intElements[i];
-            doubleElements[i + 1] = doubleElements[i];
-            stringElements[i + 1] = stringElements[i];
-            typeOfElements[i + 1] = typeOfElements[i];
+          for (int i = filledElements; i > index; i--) {
+            intElements[i] = intElements[i -1];
+            doubleElements[i] = doubleElements[i-1];
+            stringElements[i] = stringElements[i-1];
+            typeOfElements[i] = typeOfElements[i-1];
           }
           if (type == 0) {
             intElements[index] = intValue;
@@ -171,9 +168,5 @@ public class List_inArraySlots {
           filledElements++;
         }
       }
-<<<<<<< HEAD
-     }
-=======
 
->>>>>>> 50984b85c7cdab707aa741a2eb5c273c23f8916d
 }
