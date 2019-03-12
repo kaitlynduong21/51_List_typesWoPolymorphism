@@ -73,7 +73,7 @@ public class List_inArraySlots {
                               ) {
 	if(typeOfElements.length == filledElements)
 	expand();
-	
+
 
        if (type == 0) {
          intElements[filledElements] = intValue;
@@ -87,7 +87,7 @@ public class List_inArraySlots {
        typeOfElements[filledElements] = type;
        filledElements++;
        return true;
-     } element each time an add method is invoked.
+     } //element each time an add method is invoked.
 
 
     /**
@@ -107,7 +107,7 @@ public class List_inArraySlots {
 	   expandedDoubleList[i] = doubleElements[i];
 	   expandedStringList[i] = stringElements[i];
     	}
-    	
+
 	typeOfElements = expandedTypeList;
     	intElements = expandedIntList;
     	doubleElements = expandedDoubleList;
@@ -121,15 +121,14 @@ public class List_inArraySlots {
               // this method is called when that is appropriate.
               // So test using the println(), then comment it out.
               // */
-<<<<<<< HEAD
-     // }
+     }
 
      public void add( int index, int type   // same meaning as in typeOfElements
                               , int intValue
                               , double doubleValue
                               , String stringValue
                               ) {
-        if (filledElements = typeOfElements.length) {
+        if (filledElements == typeOfElements.length) {
           expand();
         }
         if (index == filledElements) {
@@ -155,9 +154,4 @@ public class List_inArraySlots {
         }
       }
 
-
-
-=======
-     }
->>>>>>> f817f40b35fee6b3d0f5688d7ef070a9072abeaa
 }

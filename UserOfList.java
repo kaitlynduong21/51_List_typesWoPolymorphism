@@ -34,5 +34,7 @@ public class UserOfList {
          System.out.println("result of expanded list: "
               + list.size() + " elements:");
          System.out.println( list + System.lineSeparator());
+
+         //list.add( 1, -1, 1.618, "junk");
     }
 }
