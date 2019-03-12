@@ -83,7 +83,7 @@ public class List_inArraySlots {
        typeOfElements[filledElements] = type;
        filledElements++;
        return true;
-     }
+     } element each time an add method is invoked.
 
 
     /**
@@ -99,4 +99,38 @@ public class List_inArraySlots {
               // So test using the println(), then comment it out.
               // */
      // }
+
+     public void add( int index, int type   // same meaning as in typeOfElements
+                              , int intValue
+                              , double doubleValue
+                              , String stringValue
+                              ) {
+        if (filledElements = typeOfElements.length) {
+          expand();
+        }
+        if (index == filledElements) {
+          add(type, intValue, doubleValue, stringValue);
+        } else {
+          for (int i = index; i < filledElements - 1; i++) {
+            intElements[i] = intElements[i + 1];
+            doubleElements[i] = doubleElements[i + 1];
+            stringElements[i] = stringElements[i + 1];
+            typeOfElements[i] = typeOfElements[i + 1];
+          }
+          if (type == 0) {
+            intElements[index] = intValue;
+          } else {
+            if (type == 1) {
+              doubleElements[index] = doubleValue;
+            } else {
+              stringElements[index] = stringValue;
+            }
+          }
+          typeOfElements[index] = type;
+          filledElements++;
+        }
+      }
+
+
+
 }
