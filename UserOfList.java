@@ -35,6 +35,15 @@ public class UserOfList {
               + list.size() + " elements:");
          System.out.println( list + System.lineSeparator());
 
+         System.out.println("Testing Set");
+
+         for( int elemIndex = 1; elemIndex < list.size(); elemIndex*=2 ) {
+             System.out.println( "Element at position " + elemIndex + ": " + list.get(elemIndex));
+         }
+
+
+         System.out.println("\nTesting Add");
+
          addAtTest( 1, 1, -1, 1.618, "junk");
 
          addAtTest( 10, 2, -1, -2.0,  "important");

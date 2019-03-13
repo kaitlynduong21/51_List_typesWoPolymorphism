@@ -169,4 +169,19 @@ public class List_inArraySlots {
         }
       }
 
+    public Element get(int index) {
+      int type = typeOfElements[index];
+      Element getValue = new Element(type);
+      if (type == 0) {
+        getValue.setInt(intElements[index]);
+      } else {
+        if (type == 1) {
+          getValue.setDouble(doubleElements[index]);
+        } else {
+          getValue.setString(stringElements[index]);
+        }
+      }
+      return getValue;
+    }
+
 }
